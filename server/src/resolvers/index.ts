@@ -10,6 +10,12 @@ const resolvers = {
         getTodos: async () =>{
             return await todoService.getAll();
         }
+    },
+    
+    Mutation: {
+        addTodo:  async (_: any, {title, tags}: {title:String, tags:String[]}) =>{
+            return await todoService.create(title, tags)
+        }
     }
 }
 

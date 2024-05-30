@@ -11,7 +11,7 @@ class TodoService {
         return await this.todoRepository.getAll();
     }
 
-    async create(title: string, tags: string[]){
+    async create(title: String, tags: String[]){
         return await this.todoRepository.create(title, tags)
     }
 }
